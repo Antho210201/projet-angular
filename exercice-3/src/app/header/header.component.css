@@ -1,0 +1,18 @@
+header {
+  text-align: center;
+  padding: 1rem;
+  background: #3498db;
+  color: white;
+  border-bottom: 4px solid #2980b9;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.time {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  opacity: 0.9;
+}

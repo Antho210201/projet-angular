@@ -1,0 +1,16 @@
+.alignment {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem 0;
+}
+
+.alignment label {
+  font-weight: bold;
+  color: #2c3e50;
+  cursor: pointer;
+}
+
+.alignment input[type="radio"] {
+  margin-right: 0.3rem;
+}

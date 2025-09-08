@@ -1,0 +1,9 @@
+<div class="container">
+  <h2>Calculatrice</h2>
+
+  <app-calculator (calculateEvent)="onCalculate($event)"></app-calculator>
+
+  <app-result [result]="result"></app-result>
+
+  <app-history [history]="history" (deleteEntry)="onDeleteEntry($event)"></app-history>
+</div>

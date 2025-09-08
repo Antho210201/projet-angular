@@ -1,0 +1,36 @@
+<div class="alignment">
+  <label>Alignement :</label>
+
+  <label>
+    <input
+      type="radio"
+      name="align"
+      [(ngModel)]="selectedAlign"
+      value="left"
+      (change)="onChange()"
+    />
+    Gauche
+  </label>
+
+  <label>
+    <input
+      type="radio"
+      name="align"
+      [(ngModel)]="selectedAlign"
+      value="center"
+      (change)="onChange()"
+    />
+    Centré
+  </label>
+
+  <label>
+    <input
+      type="radio"
+      name="align"
+      [(ngModel)]="selectedAlign"
+      value="right"
+      (change)="onChange()"
+    />
+    Droite
+  </label>
+</div>

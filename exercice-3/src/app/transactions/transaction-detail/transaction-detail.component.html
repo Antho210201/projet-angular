@@ -1,0 +1,19 @@
+<div class="detail-container">
+  <h2>Détail de la transaction</h2>
+
+  @if (transaction) {
+  <p><strong>Id :</strong> {{ transaction.id }}</p>
+  <p>
+    <strong>Montant : </strong>
+    <span [ngStyle]="{ color: transaction.amount < 0 ? 'red' : 'green' }">{{
+      transaction.amount
+    }}</span>
+  </p>
+  <p><strong>Solde après :</strong> {{ transaction.balance }}</p>
+  <p><strong>Libellé :</strong> {{ transaction.label }}</p>
+  <p><strong>Description :</strong> {{ transaction.description }}</p>
+  <p><strong>Date :</strong> {{ transaction.date | date : 'dd/MM/yyyy HH:mm' }}</p>
+  }
+
+  <button routerLink="">Retour à la liste</button>
+</div>

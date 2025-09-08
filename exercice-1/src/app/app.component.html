@@ -1,0 +1,30 @@
+<div class="container">
+  <h2>Personnalisation</h2>
+
+  <div class="controls">
+    <label
+      >Nom :
+      <input [(ngModel)]="name" placeholder="Tapez votre nom !" />
+    </label>
+
+    <label
+      >Police :
+      <select [(ngModel)]="font">
+        <option value="Arial">Arial</option>
+        <option value="Courier New">Courier New</option>
+        <option value="Times New Roman">Times New Roman</option>
+        <option value="Verdana">Verdana</option>
+      </select>
+    </label>
+
+    <label
+      >Taille :
+      <input type="number" [(ngModel)]="size" />
+    </label>
+  </div>
+
+  <app-alignment (alignChanged)="updateAlign($event)"></app-alignment>
+
+
+  <div class="preview" [ngStyle]="TextStyle">Bonjour {{ name.toUpperCase() }} !</div>
+</div>

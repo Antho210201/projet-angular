@@ -1,0 +1,10 @@
+.result {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.result span {
+  font-weight: bold;
+  color: #27ae60;
+}

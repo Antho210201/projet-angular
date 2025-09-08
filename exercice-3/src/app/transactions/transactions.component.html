@@ -1,0 +1,26 @@
+<div class="list-container">
+  <h2>Liste des transactions</h2>
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th (click)="sortBy('id')">ID</th>
+        <th (click)="sortBy('amount')">Montant</th>
+        <th (click)="sortBy('balance')">Solde</th>
+        <th (click)="sortBy('label')">Libellé</th>
+        <th (click)="sortBy('date')">Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (t of transactions; track t.id) {
+      <tr [routerLink]="['/transaction', t.id]">
+        <td>{{ t.id }}</td>
+        <td [ngStyle]="{ color: t.amount < 0 ? 'red' : 'green' }">{{ t.amount }}</td>
+        <td>{{ t.balance }}</td>
+        <td>{{ t.label }}</td>
+        <td>{{ t.date | date : 'dd/MM/yyyy HH:mm' }}</td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>
